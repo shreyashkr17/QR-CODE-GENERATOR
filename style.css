@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background:linear-gradient(to right,rgba(0,0,0,0.4),rgba(0,0,0,0.9));
+    border: 10px solid white;
+}
+.wrapper{
+    
+    height: 260px;
+    background-color: #fff;
+    max-width: 410px;
+    border-radius: 12px;
+    padding: 16px 25px;
+    transition: height 0.2s ease;
+}
+.wrapper.active{
+    height: 563px;
+}
+header h1{
+    font-size: 21px;
+    font-weight: 800;
+    text-decoration: double underline;
+}
+header p{
+    margin-top: 5px;
+    color: #474747;
+    font-size: 16px;
+}
+.wrapper .form{
+    margin: 20px 0 30px;
+}
+.form:where(input,button){
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.form input{
+    font-size: 18px;
+    padding: 0 17px;
+    border: 1px solid black;
+    width: 100%;
+    height: 50px;
+}
+.form button{
+    border-radius: 10px;
+    width: 100%;
+    height: 55px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 21px;
+    background-color: black;
+}
+.wrapper .qr-code{
+    display: flex;
+    padding: 33px 0;
+    opacity: 0;
+    pointer-events: none;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+} 
+
+.wrapper.active .qr-code{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.05s ease;
+}
